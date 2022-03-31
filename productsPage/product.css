@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    max-width: 100%;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    margin: 1rem;
+}
+header .toggle-icon {
+    font-size: 1.6rem;
+}
+.toggle-menu {
+    display: none;
+    transform: translateX(300px);
+    transition: transform 3s ease;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 32%;
+    height: 100%;
+    z-index: 10000;
+    background-color: white;
+}
+.toggle-menu li {
+    display: flex;
+    margin: 1.5rem .8rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+li i.uil-times {
+    margin-left: 4rem;
+    font-size: 2rem;
+}
+.toggle-menu li i {
+    margin-right: .3rem;
+}
+.searchBox input {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+}
+.searchBox i {
+    position: absolute;
+    top: 1rem;
+
+}
+header .logo img {
+    width: 2rem;
+    height: 2rem;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+.products .product {
+    margin: 1rem;
+}
+.product .title {
+    font-size: 1.7rem;
+    height: 3rem;
+}
+.buy {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.buy p {
+    font-size: 1.6rem;
+}
+.buy img {
+    width: 3rem;
+}

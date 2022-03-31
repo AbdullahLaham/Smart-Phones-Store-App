@@ -84,11 +84,16 @@ function showBrandsNames(data) {
  function fetchRelatedMobiles(brand) {
     fetch(`${brand}`)
     .then(data => data.json())
-    //.then(data => console.log(data.data))
-    window.open('./productsPage/product.html', '_self')
+    .then(data => showRealtedProducts(data.data))
+    
  }
 
- // fetch top brands
+ function showRealtedProducts(data) {
+     localStorage.setItem("title", JSON.stringify(data.title))
+     localStorage.setItem("phones", JSON.stringify(data.phones))
+    window.open('./productsPage/product.html', '_self')
+ }
+ // fetch top products
  fetchTopProducts()
 
 
