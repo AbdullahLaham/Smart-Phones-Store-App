@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    max-width: 100%;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.splashSection {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 113, 230);
+    transition: all 10s ease;
+}
+
+.splashSection img {
+    width: 5rem;
+    height: 5rem;
+    display: block;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    margin: 1rem;
+}
+header .toggle-icon {
+    font-size: 1.6rem;
+}
+.toggle-menu {
+    display: none;
+    transform: translateX(300px);
+    transition: transform 3s ease;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 32%;
+    height: 100%;
+    z-index: 10000;
+    background-color: white;
+}
+.toggle-menu li {
+    display: flex;
+    margin: 1.5rem .8rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+li i.uil-times {
+    margin-left: 4rem;
+    font-size: 2rem;
+}
+.toggle-menu li i {
+    margin-right: .3rem;
+}
+.searchBox input {
+    padding: 5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+}
+.searchBox i {
+    position: absolute;
+    top: 1rem;
+
+}
+header .logo img {
+    width: 2rem;
+    height: 2rem;
+}
+.container {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    width: 30rem;
+    position: relative;
+}
+.slider {
+    display: flex;
+    width: 100%;
+    transition: .5s ease 
+}
+.slider img {
+    width: 30rem;
+    height: 18rem;
+    object-fit: cover;
+    
+}
+button.prev, button.next {
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: .2rem;
+    position: absolute;
+    z-index: 100;
+    
+    transform: translateY(-50%);
+}
+.container {
+    margin: auto;
+}
+.container button.prev {
+    top: 50%;
+    left: .6rem;
+}
+.container button.next {
+    top: 50%;
+    right: .6rem;
+}
+.brands {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+    margin: 1rem 2rem;
+}
+.brand {
+    margin: .5rem;
+    width: 28%;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(91, 91, 163);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topProductsCont {
+    position: relative;
+    width: 93%;
+    overflow-x: hidden;
+    display: flex;
+    margin: auto;
+}
+.top_products {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    transition: all 1s ease;
+    transform: translateX(-10px);
+}
+
+.topProduct {
+    width: 45%;
+    margin: .8rem;
+    border-radius: 12px;
+    background-color: rgba(170, 179, 184, 0.37);
+    padding: .7rem;
+}
+.topProductsCont button.next {
+    top: 50%;
+    right: .3rem;
+    font-size: 1.3rem;
+}
+.topProductsCont button.prev {
+    top: 50%;
+    left: .3rem;
+    font-size: 1.3rem;
+}
+.topProduct img {
+    margin-bottom: .5rem;
+}
+.topProduct .title {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.buy {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.buy img {
+    width: 3rem;
+}
