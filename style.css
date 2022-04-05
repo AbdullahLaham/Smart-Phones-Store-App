@@ -183,6 +183,7 @@ button.prev, button.next {
 }
 .topProduct img {
     margin-bottom: .5rem;
+    cursor: pointer;
 }
 .topProduct .title {
     height: 2rem;

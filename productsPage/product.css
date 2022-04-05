@@ -68,15 +68,21 @@ header .logo img {
     width: 2rem;
     height: 2rem;
 }
+h2.Title {
+    font-size: 2rem;
+    margin: 0 4rem;
+}
 .products {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .products .product {
-    margin: 1rem;
+    margin: 1.2rem;
+    width: 9rem;
 }
 .product .title {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     height: 3rem;
 }
 .buy {
@@ -84,10 +90,12 @@ header .logo img {
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 .buy p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 .buy img {
     width: 3rem;
+    cursor: pointer;
 }

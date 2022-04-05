@@ -12,8 +12,26 @@ nextProduct = document.querySelector('.nextPro'),
 prevProduct = document.querySelector('.prevPro'),
 containerProducts = document.querySelector('.topProductsCont')
 let products;
-let carts = []
+let carts;
+if (localStorage.getItem("cart")) {
+    carts = JSON.parse(localStorage.getItem('cart'))
+    console.log("its here", carts)
+} else {
+    carts = [];
+}
 
+let pricess;
+
+if (localStorage.getItem('prices')) 
+    pricess = JSON.parse(localStorage.getItem('prices'))
+else
+    pricess = []
+
+// random prices for the products
+let prices = ['854', '389', '227', '689', '865', '978', "1024", "569", "2656", "875"]
+
+// variable for adding prices
+let i = 0
 
 // console.log(prevBtn, nextBtn)
 setInterval(() => {
@@ -120,10 +138,14 @@ function showTopProducts(data) {
         let logo = document.createElement('img')
         logo.src = 'https://icons.veryicon.com/png/o/education-technology/blue-gray-solid-blend-icon/shopping-cart-193.png';
         logo.addEventListener('click', () => {
-            addToCart(brand)
+            addToCart(brand, price.innerHTML)
         })
         let price = document.createElement('p')
-        price.innerHTML = "265$"
+
+        price.innerHTML = `${prices[i]}`;
+        if (i < prices.length - 1) i++;
+        else i;
+
         sellings.appendChild(price)
         sellings.appendChild(logo)
         topProduct.appendChild(asset)
@@ -139,12 +161,12 @@ nextProduct.addEventListener('click', () => {
     // console.log(topProducts.clientWidth)
     if (topProducts.clientWidth < 500) {
         if (counter2 < 8) {
-            counter2 += .6
+            counter2 += .52
         }
     }
     else if (topProducts.clientWidth < 850) {
         if (counter2 < 4) {
-            counter2++
+            counter2 += .8
         }
     }
     else if (topProducts.clientWidth >= 850) {
@@ -165,8 +187,11 @@ prevProduct.addEventListener('click', () => {
     
     //if (topProducts.clientWidth * counter2 > 0)
         });
-function addToCart(brand) {
+function addToCart(brand, thePrice) {
+    pricess.push(thePrice)
     carts.push(brand)
     localStorage.setItem("cart", JSON.stringify(carts))
+    localStorage.setItem('prices', JSON.stringify(pricess))
+    console.log(carts)
     window.open('./cartPage/cart.html', "_self")
 }
