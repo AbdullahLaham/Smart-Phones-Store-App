@@ -10,6 +10,23 @@ body {
 ul li {
     list-style: none;
 }
+h2.title {
+    margin: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(65, 63, 63);
+}
+h2.title::after {
+    content: '';
+    width: 30%;
+    height: .3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: .3rem;
+    background-color: rgb(69, 224, 224);
+    position: absolute;
+    display: block;
+}
 a {
     text-decoration: none;
     color: black;
@@ -27,13 +44,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(24, 113, 230);
+    background-color: rgb(112, 170, 245);
     transition: all 10s ease;
 }
 
 .splashSection img {
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
     display: block;
 }
 header {
@@ -86,13 +103,35 @@ li i.uil-times {
     top: 1rem;
 
 }
-header .logo img {
+header .logo img, div.fullScreen img {
     width: 2rem;
     height: 2rem;
 }
+.fullScreen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.fullScreen .menu{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-around;
+    
+}
+.fullScreen .menu li a{
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.fullScreen .menu li a:hover  {
+    background-color: rgb(23, 125, 172);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
 .container {
     max-width: 100%;
-    width: 100%;
     overflow-x: hidden;
     width: 30rem;
     position: relative;
@@ -133,18 +172,25 @@ button.prev, button.next {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 100%;
+    max-width: 85%;
     justify-content: center;
-    margin: 1rem 2rem;
+    margin: 1rem auto;
+    max-height: 18rem;
+    overflow-y: auto;
+}
+.brands::-webkit-scrollbar {
+    width: 0;
 }
 .brand {
     margin: .5rem;
-    width: 28%;
-    color: white;
+    width: 23%;
+    color: black;
+    font-weight: 500;
     font-size: 1.5rem;
-    padding: 1rem;
-    background-color: rgb(91, 91, 163);
+    padding: 1rem 2rem;
+    background-color: rgb(111, 187, 238);
     border-radius: 12px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,4 +249,42 @@ button.prev, button.next {
 }
 .buy img {
     width: 3rem;
+}
+
+
+
+@media screen and (max-width: 767px){
+    .fullScreen {
+        display: none;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .fullScreen {
+        display: none;
+    }
+    .container {
+        width: 50rem;
+        border-radius: 2.5rem;
+        margin: 0 auto;
+    }
+    .slider img{
+        width: 50rem;
+        height: 30rem;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width: 1024px){
+    header{
+        display: none;
+    }
+    .container {
+        width: 80%;
+        border-radius: 2.5rem;
+        margin: 0 auto;
+    }
+    .slider img{
+        width: 70rem;
+        height: 35rem;
+        object-fit: cover;
+    }
 }

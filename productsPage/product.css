@@ -79,7 +79,16 @@ h2.Title {
 }
 .products .product {
     margin: 1.2rem;
-    width: 9rem;
+    width: 14rem;
+    background-color: whitesmoke;
+    box-shadow: 7px 6px 12px 0px rgba(0,0,0,0.56);
+    transition: .5s ease;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.product:hover {
+    box-shadow: 7px 6px 12px 0px rgba(0,0,0,0.75);
+
 }
 .product .title {
     font-size: 1.4rem;
