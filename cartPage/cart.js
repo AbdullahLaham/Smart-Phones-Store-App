@@ -33,7 +33,7 @@ toggleIcon.addEventListener('click', () => {
 // console.log(cart)
 getProductsFromCart()
 function getProductsFromCart() {
-    //relatedProducts = ''
+    total.innerText = 0
     for (let i = 0; i < carts.length; i++) {
         let pro = carts[i]
         if (pro == 0) continue
@@ -66,18 +66,22 @@ function getProductsFromCart() {
 
         counter.querySelector('.uil-plus').addEventListener('click', (e) => {
             increase(e.target)
+            console.log(price)
             let totaal = parseInt(total.innerHTML)
-            totaal += +price.innerHTML;
+            totaal += +price.innerText;
             total.innerHTML = totaal
         })
 
         counter.querySelector('.uil-minus').addEventListener('click', (e) => {
             if (+counter.querySelector('.value').innerText > 1) {
+                console.log(price)
                 let totaal = parseInt(total.innerHTML)
-                totaal -= +price.innerHTML;
+                totaal -= +price.innerText;
                 total.innerHTML = totaal
-                decrease(e.target)
+                +e.target.parentElement.querySelector('.value').innerHTML--
+                
             }
+            
         })
         
         let deleteBtn = document.createElement('button')
@@ -101,12 +105,15 @@ function getProductsFromCart() {
     }
 }
 function DeleteItemFromCart(i) {
+    let deletedPrice = +pricess[i]
     carts[i] = 0
     pricess[i] = 0
     console.log(carts)
     container.innerHTML = ''
     getProductsFromCart()
     deleteFromLocalStorage(i)
+    console.log(total.innerHTML)
+    console.log(total.innerHTML)
 }
 function deleteFromLocalStorage(i) {
     carts = carts.filter(product => {
@@ -118,12 +125,5 @@ function deleteFromLocalStorage(i) {
 }
 function increase(e) {
     console.log(e)
-    e.parentElement.querySelector('.value').innerHTML++
-    
-
-}
-function decrease(e) {
-    if (e.parentElement.querySelector('.value').innerHTML > 1) {
-        e.parentElement.querySelector('.value').innerHTML--
-    }
+    +e.parentElement.querySelector('.value').innerHTML++
 }

@@ -65,17 +65,60 @@ li i.uil-times {
 
 }
 header .logo img {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+}
+header .logo img, div.fullScreen img {
     width: 2rem;
     height: 2rem;
+}
+.fullScreen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.fullScreen .menu{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-around;
+    
+}
+.fullScreen .menu li a{
+    font-size: 1.2rem;
+    transition: .3s;
+}
+.fullScreen .menu li a:hover  {
+    background-color: rgb(23, 125, 172);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
 }
 h2.Title {
     font-size: 2rem;
     margin: 0 4rem;
 }
 .product {
-    margin: 1rem;
-    border:  1px solid grey;
-    padding: 1rem;
+    margin: .5rem;
+    border-radius: 2rem;
+    padding: .7rem 1rem;
+    background-color: whitesmoke;
+    width: 31%;
+    height: 17rem;
+    box-shadow: 7px 6px 12px 0px rgba(0,0,0,0.58);
+    transition: .3s ease;
+}
+.product:hover {
+    box-shadow: 7px 6px 12px 0px rgba(0,0,0,0.86);
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 .product .title {
     font-size: 1.8rem;
@@ -94,11 +137,13 @@ h2.Title {
 .counter i, .counter p{
     display: block;
     padding: .5rem;
+    margin-top: .1rem;
     border: 1px solid grey;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    font-size: 1.5rem;
 }
 .counter i {
     cursor: pointer;
@@ -108,7 +153,7 @@ h2.Title {
     font-size: 2rem;
 }
 .counter {
-    height: 10rem;
+    height: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,7 +163,7 @@ h2.Title {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: .2rem;
 }
 .buy button {
     padding: .4rem;
@@ -134,10 +179,12 @@ h2.Title {
     font-size: 1.7rem;
 }
 .buyNow {
-    margin: 1rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 79%;
+    margin: 2rem auto;
 }
 .buyHere {
     padding: .8rem 2rem;
@@ -149,4 +196,32 @@ h2.Title {
 }
 .total {
     font-size: 2rem;
+}
+
+@media screen and (max-width: 767px){
+    .fullScreen {
+        display: none;
+    }
+    .product {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .fullScreen {
+        display: none;
+    }
+    .product {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+    
+   
+
+@media screen and (min-width: 1024px){
+    header{
+        display: none;
+    }
+    
 }

@@ -5,10 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about.css" />
-    <title>ABOUT PAGE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>ABOUT US</title>
 </head>
 <body>
+    <div class="header">
+      <a href="../index.html" class="logo"><i class="fa fa-angle-left"></i></a>
+      <a href="#" onclick="displayDrawer()" class="logo"><i class="fa fas fa-bars"></i></a>
+    </div>
     
+    <div class="blue-background">
+        <header>
+          <img src="../images/logo.png" />
+          <div class="list">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../cartPage/cart.html">My Cart</a></li>
+              <li><a href="../aboutPage/about.html">About Us</a></li>
+          </div>
+      </header>
+      <div id="drawer" style="display: none">
+        <div class="drawerMenu">
+          <div class="xDiv">
+            <i class="fa-solid fa-x" onclick="displayDrawer()"></i>
+          </div>
+
+          <ul>
+            <li><i class="fa fa-home drawerI"></i><a href="../index.html">Home</a></li>
+            <li><i class="fa fa-shopping-bag drawerI"></i><a href="../cartPage/cart.html">My Cart</a></li>
+            <li><i class="fa fa-info-circle drawerI"></i><a href="../aboutPage/about.html">About Us</a></li>
+            <li>
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook social"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram social"></i></a>
+              <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter social"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="about">
+        <h2>About</h2>
+        <p class="about-text">Ultra Mobile is an electronic smart phone store that seeks to provide the best service and market the best product at the most appropriate prices and meet the requirements of the local and global market from modern technology to enrich the information technology sector.</p>       
+      
+      </div>
+    </div>
+    <div class="ownerss">
+      <h2>Owners</h2>
+      <div class="owners">
+          
+      </div>
+    </div>
+    <div class="our-msg">
+      <h2>Our Message</h2>
+      <p class="message">Putting a distinct imprint in the world of technology and related devices.</p>
+    </div>
+    <div class="social-media">
+      <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook social"></i></a></li>
+      <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram social"></i></a></li>
+      <li><a href="https://www.twitter.com/"><i class="fa-brands fa-twitter social"></i></a></li>
+    </div>
     <script src="about.js"></script>
 </body>
 </html>
